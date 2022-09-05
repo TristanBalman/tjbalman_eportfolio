@@ -11,68 +11,223 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <section id="landing">
-      <nav>
-        <figure>
-          <img id="personal-logo" src="./assets/logo.svg" alt="" />
-        </figure>
-        <ul class="nav__link--list">
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >About</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Projects</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Contact</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-            >
-              <i class="fa-solid fa-circle-half-stroke"></i
-            ></a>
-          </li>
-        </ul>
-      </nav>
 
+  <body>
+    <nav>
+      <figure>
+        <img id="personal-logo" src="./assets/logo.svg" alt="" />
+      </figure>
+      <ul class="nav__link--list">
+        <li class="nav__link">
+          <a
+            href="#"
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >About</a
+          >
+        </li>
+        <li class="nav__link">
+          <a
+            href="#projects"
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >Projects</a
+          >
+        </li>
+        <li class="nav__link">
+          <a
+            href="#"
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >Contact</a
+          >
+        </li>
+        <li class="nav__link click">
+          <a
+            href="#"
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+          >
+            <i class="fa-solid fa-circle-half-stroke"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <section id="landing">
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey!</h1>
           <h1 class="title blue">I'm Tristan.</h1>
           <p class="header__para">
-            I'm an aspiring <b class="blue">Frontend Software Developer</b> with a strong passion
-            for building web applications with great user experiences.
-            <br>
+            I'm an aspiring <b class="blue">Frontend Software Developer</b> with
+            a strong passion for building web applications with great user
+            experiences.
+            <br />
             Here's more <b class="blue">about me</b>.
           </p>
           <div class="social__list">
-            <a href="https://www.linkedin.com/in/tjbalman/" target="_blank" class="social__link click">
-                <i class="fa-brands fa-linkedin-in"></i>
+            <a
+              href="https://www.linkedin.com/in/tjbalman/"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/TristanBalman" target="_blank" class="social__link click">
-                <i class="fa-brands fa-github"></i>
+            <a
+              href="https://github.com/TristanBalman"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-github"></i>
             </a>
-            <a href="" class="social__link click">
-                <i class="fa-regular fa-file-pdf"></i>
+            <a
+              href="./assets/Tristan Balman - CV.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-regular fa-file-pdf"></i>
             </a>
           </div>
         </div>
       </header>
+      <button class="mail__btn click">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
     </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="blue">projects</span>
+          </h1>
+          <ul class="project__list">
+            <!-- Project List Elements Start -->
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sales Example</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Aliquid ipsum hic aliquam deserunt quasi! Neque id minus
+                    commodi dignissimos nemo!
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sales Example</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Aliquid ipsum hic aliquam deserunt quasi! Neque id minus
+                    commodi dignissimos nemo!
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sales Example</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Aliquid ipsum hic aliquam deserunt quasi! Neque id minus
+                    commodi dignissimos nemo!
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Project List Elements End -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img class="footer__logo--img" src="./assets/logo.svg" alt="" />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >GitHub</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >LinkedIn</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Resume</a
+            >
+          </div>
+          <div class="footer__copyright">Copyright © 2022 Tristan Balman</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
