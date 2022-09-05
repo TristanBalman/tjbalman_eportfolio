@@ -57,6 +57,33 @@ section {
   transform: scale(0.8);
 }
 
+.link__hover-effect {
+  position: relative;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect--blue:after {
+  background-color: rgb(62, 192, 205);
+}
+
+.link__hover-effect--grey:after {
+  background-color: rgb(222, 221, 218);
+}
+
+.link__hover-effect:hover::after {
+  left: 0;
+  width: 100%;
+}
+
 .title {
   font-size: 76px;
   margin-bottom: 12px;
@@ -201,6 +228,94 @@ nav {
 }
 
 /*----------*/
+
+/*
+
+---------- MODAL
+
+*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1100px;
+  height: 700px;
+  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+
+.modal__half {
+  width: 50%;
+  padding: 40px 72px;
+}
+
+.modal__about {
+  background-color: rgb(222, 221, 218);
+  color: #2e3336;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__languages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal__language {
+  width: 25%;
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.modal__language:hover .language__name {
+  transform: scale(1);
+}
+
+.modal__language:hover {
+  filter: brightness(80%);
+  transform: scale(0.9);
+}
+
+.language__name {
+  position: absolute;
+  bottom: -10px;
+  transform: scale(0);
+  transition: all 300ms ease;
+}
+
+.modal__language--img {
+  width: 100%;
+}
+
+.modal__contact {
+  background-color: #2e3336;
+  color: white;
+}
+
+.modal__title {
+  font-size: 26px
+}
+
+.modal__sub-title {
+  margin: 12px 0 24px 0;
+}
+
+.modal__para {
+margin-bottom: 12px;
+line-height: 1.75;
+}
+
+
 
 /*
 

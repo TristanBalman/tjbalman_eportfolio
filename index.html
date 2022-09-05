@@ -13,43 +13,41 @@
   </head>
 
   <body>
-    <nav>
-      <figure>
-        <img id="personal-logo" src="./assets/logo.svg" alt="" />
-      </figure>
-      <ul class="nav__link--list">
-        <li class="nav__link">
-          <a
-            href="#"
-            class="nav__link--anchor link__hover-effect link__hover-effect--black"
-            >About</a
-          >
-        </li>
-        <li class="nav__link">
-          <a
-            href="#projects"
-            class="nav__link--anchor link__hover-effect link__hover-effect--black"
-            >Projects</a
-          >
-        </li>
-        <li class="nav__link">
-          <a
-            href="#"
-            class="nav__link--anchor link__hover-effect link__hover-effect--black"
-            >Contact</a
-          >
-        </li>
-        <li class="nav__link click">
-          <a
-            href="#"
-            class="nav__link--anchor link__hover-effect link__hover-effect--black"
-          >
-            <i class="fa-solid fa-circle-half-stroke"></i
-          ></a>
-        </li>
-      </ul>
-    </nav>
     <section id="landing">
+      <nav>
+        <figure>
+          <img id="personal-logo" src="./assets/logo.svg" alt="" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--blue"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--blue"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--blue"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click">
+            <a href="#" class="nav__link--anchor">
+              <i class="fa-solid fa-circle-half-stroke"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey!</h1>
@@ -92,6 +90,72 @@
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
+
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm an aspiring <b class="blue">Frontend Engineer</b> eagerly seeking a career in
+            bringing web applications to life and providing a fantastic <b class="blue">user experience</b>.
+            <br />
+            I enjoy <b class="blue">problem-solving</b>, <b class="blue">collaborating</b> as a team and being able to
+            <b class="blue">consistently learn</b>.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">
+                HTML
+              </span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">
+                CSS
+              </span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">
+                JavaScript
+              </span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
+              <span class="language__name">
+                React
+              </span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png"
+                alt=""
+              />
+              <span class="language__name">
+                TypeScript
+              </span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">Let's have a chat.</div>
+      </div>
     </section>
 
     <section id="projects">
@@ -206,22 +270,22 @@
           <div class="footer__social--list">
             <a
               href="#"
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+              class="footer__social--link link__hover-effect link__hover-effect--grey"
               >GitHub</a
             >
             <a
               href="#"
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+              class="footer__social--link link__hover-effect link__hover-effect--grey"
               >LinkedIn</a
             >
             <a
               href="#"
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+              class="footer__social--link link__hover-effect link__hover-effect--grey"
               >Contact</a
             >
             <a
               href="#"
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+              class="footer__social--link link__hover-effect link__hover-effect--grey"
               >Resume</a
             >
           </div>
