@@ -31,6 +31,43 @@ button {
 
 section {
   background-color: rgb(222, 221, 218);
+  transition: all 300ms ease;
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: #2e3336;
+  color: white;
+  outline: none;
+  border: 3px solid rgb(222, 221, 218);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
+  transition: all 300ms ease;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+  margin-top: 8px;
+}
+
+input:hover,
+textarea:hover {
+  border-color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgb(62, 192, 205);
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
 }
 
 .container {
@@ -46,6 +83,7 @@ section {
 }
 
 .click {
+  cursor: pointer;
   transition: all 300ms ease;
 }
 
@@ -91,6 +129,49 @@ section {
   line-height: 1;
 }
 
+/* Hide Background Content when Modal is Open */
+
+nav,
+.scroll,
+.header {
+  opacity: 1;
+  visibility: visible;
+  transition: all 400ms 400ms;
+}
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms;
+}
+
+/* Dark Theme for toggleContrast() */
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para{
+color: #fff;
+}
+.dark-theme section {
+  background-color: #2e3336;
+}
+.dark-theme #personal-logo {
+  filter: none;
+}
+.dark-theme .scroll__icon {
+  border-color: #fff;
+}
+.dark-theme .scroll__icon:after {
+  background-color: #fff;
+}
+.dark-theme .mail__btn {
+  background-color: #fff;
+  color: #2e3336;
+}
 /*
 
 ---------- LANDING PAGE
@@ -217,7 +298,6 @@ nav {
   border-radius: 4px;
   animation: scroll 1000ms infinite alternate-reverse;
 }
-
 @keyframes scroll {
   0% {
     transform: translateY(6px);
@@ -243,23 +323,39 @@ nav {
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal--open .modal {
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45);
+  visibility: visible;
 }
 
 .modal__half {
   width: 50%;
   padding: 40px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+  transform: translateX(0%);
 }
 
 .modal__about {
   background-color: rgb(222, 221, 218);
   color: #2e3336;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  transform: translateX(-110%);
 }
 
 .modal__languages {
@@ -300,22 +396,102 @@ nav {
 .modal__contact {
   background-color: #2e3336;
   color: white;
+  transform: translateX(110%);
 }
 
 .modal__title {
-  font-size: 26px
+  font-size: 26px;
 }
 
 .modal__sub-title {
   margin: 12px 0 24px 0;
+  font-size: 16px;
 }
 
 .modal__para {
-margin-bottom: 12px;
-line-height: 1.75;
+  margin-bottom: 12px;
+  line-height: 1.75;
 }
 
+.form__item {
+  margin-bottom: 20px;
+}
 
+.form__submit {
+  background-color: rgb(62, 192, 205);
+  border: 2px solid rgb(62, 192, 205);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  max-width: 240px;
+  width: 100%;
+  padding: 12px 24px;
+  transition: all 300ms ease;
+}
+
+.form__submit:hover {
+  border-color: #fff;
+  background-color: transparent;
+}
+
+.form__submit:active {
+  border-color: rgb(62, 192, 205);
+  color: rgb(62, 192, 205);
+}
+
+/* Contact Loading State */
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__overlay--loading {
+  background-color: #2e3336;
+  font-size: 80px;
+  z-index: -1;
+}
+
+.fa-spinner {
+  animation: spinner 750ms infinite linear;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal__overlay--success {
+  background-color: #33875dde;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  z-index: -1;
+}
+
+.modal__overlay--visible {
+  z-index: 1;
+  display: flex;
+}
+
+.modal__exit {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 36px;
+  z-index: 100;
+}
 
 /*
 
@@ -399,7 +575,6 @@ line-height: 1.75;
   margin: 16px 0;
 }
 
-
 /*
 
 ---------- FOOTER SECTION
@@ -430,6 +605,7 @@ footer {
   margin: 20px;
 }
 
-.footer__social--link, .footer__copyright {
+.footer__social--link,
+.footer__copyright {
   color: white;
 }

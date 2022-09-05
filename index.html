@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tristan Balman</title>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/8f645fb7d4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
+    <!-- Email Code Snippet Start -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+      emailjs.init("GQuZK6luPgbWnk-YM");
+      })();
+    </script>
   </head>
 
   <body>
@@ -36,11 +46,11 @@
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--blue"
+              class="nav__link--anchor link__hover-effect link__hover-effect--blue" onclick="toggleModal()"
               >Contact</a
             >
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a href="#" class="nav__link--anchor">
               <i class="fa-solid fa-circle-half-stroke"></i
             ></a>
@@ -51,13 +61,13 @@
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey!</h1>
-          <h1 class="title blue">I'm Tristan.</h1>
+          <h2 class="blue title">I'm Tristan.</h2>
           <p class="header__para">
             I'm an aspiring <b class="blue">Frontend Software Developer</b> with
             a strong passion for building web applications with great user
             experiences.
             <br />
-            Here's more <b class="blue">about me</b>.
+            Here's more <b class="blue click" onclick="toggleModal()">about me</b>.
           </p>
           <div class="social__list">
             <a
@@ -84,7 +94,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -154,7 +164,34 @@
             </figure>
           </div>
         </div>
-        <div class="modal__half modal__contact">Let's have a chat.</div>
+        <div class="modal__half modal__contact">
+        <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Get in touch!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'd love to hear about new opportunities.
+          </h4>
+          <form id="contact__form" onsubmit="contact(event)" >
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" type="text" name="user_name" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" type="email" name="user_email" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" type="text" name="user_message" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thank you for messaging! Looking forward to speaking to you soon.
+          </div>
+        </div>
       </div>
     </section>
 
@@ -280,7 +317,7 @@
             >
             <a
               href="#"
-              class="footer__social--link link__hover-effect link__hover-effect--grey"
+              class="footer__social--link link__hover-effect link__hover-effect--grey" onclick="toggleModal()"
               >Contact</a
             >
             <a
