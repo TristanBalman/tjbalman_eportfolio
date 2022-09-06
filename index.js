@@ -4,6 +4,9 @@ let isModalOpen = false;
 // Light/Dark Theme Contract Variables
 let contrastToggle = false;
 
+// Animate Shapes Variables
+const scaleFactor = 1 / 20;
+
 /**
  * ------ LIGHT/DARK THEME CONTRAST - TOGGLE LOGIC
  */
@@ -59,4 +62,20 @@ function toggleModal() {
   isModalOpen = true;
 
   document.body.classList += " modal--open";
+}
+
+/**
+ * Animate background shapes onMouseMove()
+ */
+
+function animateShapes (event) {
+    const shapes = document.querySelectorAll (".shape");
+    const mouseX = event.clientX * scaleFactor;
+    const mouseY = event.clientY * scaleFactor;
+
+    for(let i = 0; i < shapes.length; ++i) {
+        const isOdd = i % 2 !== 0;
+        const boolInt = isOdd ? -1 : 1
+        shapes[i].style.transform = `translate(${mouseX * boolInt}px, ${mouseY * boolInt}px)`
+    }
 }
